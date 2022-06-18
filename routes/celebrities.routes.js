@@ -22,4 +22,21 @@ router.post('/create', async (req, res, next) => {
     }
 })
 
+// ruta para /celebrities 
+
+router.get('/', (req,res,next) => {
+    res.render('celebrities/celebrities');
+})
+
+// ruta para mostrar las celebrities
+router.get('/', async(req,res,next) => {
+    try{
+       const celebrities = await Celebrity.find({celebrities})
+        res.render('celebrities/celebrities',{celebrities})
+    }
+    catch(e){
+        console.log(e)
+    }
+})
+
 module.exports = router
