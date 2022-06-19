@@ -5,7 +5,7 @@
     <h1>Title: <input name="title"></h1>
     <h1>Genre: <input name="genre"></h1>
     <h1>Plot:<input name="plot"></h1>
-    <h1>Cast: <select name="cast" >
+    <h1>Cast: <select name="cast" multiple >
         {{#each celebrities}}
         <option value="{{this._id}}">{{this.name}}</option>
         {{/each}}
